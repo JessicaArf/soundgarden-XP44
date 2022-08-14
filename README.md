@@ -2,7 +2,7 @@
 
 <h4 align="center"><strong>Soundgarden<strong></h4>
 
-  <p align="center">Desafio Hacker - Hands On  </p>
+  <p align="center">Desafio Hacker - Hands On 2</p>
 
 <p align="center">
 

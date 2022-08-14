@@ -1,5 +1,6 @@
-const url = "https://xp41-soundgarden-api.herokuapp.com";
+const url = "https://xp41-soundgarden-api.herokuapp.com/bookings/event/:eventID";
 const novoEvento = document.querySelector("tbody")
+
 
 function arrumarData (data) {
     let date = data.split(""); // cortar a data para adicionar o / nos lugares corretos
@@ -13,11 +14,11 @@ function arrumarData (data) {
     return dataCorrigida;
   };
 
-  const id = new URLSearchParams (window.location.search).get('id');
+const id = new URLSearchParams (window.location.search).get('id');
 
 async function todosEventos () {
 
-    const response = await fetch(`${url}/bookings/events/${id}`)
+    const response = await fetch(`${url}/${id}`)
 
        const resultado = await response.json();
       
@@ -30,7 +31,6 @@ async function todosEventos () {
         </tr>
         `
         })
-
 }
 
 todosEventos();
