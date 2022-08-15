@@ -1,4 +1,5 @@
 const url = "https://xp41-soundgarden-api.herokuapp.com/events";
+const evento = document.querySelector("#atracoes")
 
 function arrumarData (data) {
     let date = data.split(""); // cortar a data para adicionar o / nos lugares corretos
@@ -11,3 +12,23 @@ function arrumarData (data) {
 
     return dataCorrigida;
   };
+
+  async function todosEventos () {
+    const response = await fetch(url);
+    console.log(response)
+
+    const resposta = await response.json();
+    const atracoes = resposta.slice(0,3);
+    atracoes.forEach((prop) => {
+    evento.innerHTML += ` <article class="evento card p-5 m-3">
+    <h2>${prop.name} - ${arrumarData(prop.scheduled)}</h2>
+    <h4>${prop.attractions}</h4>
+    <p>${prop.description}</p>
+    <button class="btn btn-primary" onclick="abreModal('${
+      prop._id
+    }')" >reservar ingresso</button>
+    </article>`;
+  })
+    }
+
+    todosEventos();
