@@ -1,5 +1,12 @@
 const url = "https://xp41-soundgarden-api.herokuapp.com/events";
 const evento = document.querySelector("#atracoes")
+const btnopen = document.querySelector(".btnopen")
+const inputID = document.querySelector("#inputId")
+const modal = document.querySelector("#modal")
+const btn = document.querySelector("#btn-fecha")
+const twoBtn = document.querySelector("#twobtn-fecha")
+const nome = document.querySelector("#name")
+const email = document.querySelector("#email")
 
 function arrumarData (data) {
     let date = data.split(""); // cortar a data para adicionar o / nos lugares corretos
@@ -13,6 +20,11 @@ function arrumarData (data) {
     return dataCorrigida;
   };
 
+  async function showModal(id) {
+    modal.setAttribute("style", "display:flex");
+    inputID.value = id;
+    const resposta = await fetch(`${url}/${id}`);}
+
   async function todosEventos () {
     const response = await fetch(url);
     console.log(response)
@@ -24,11 +36,27 @@ function arrumarData (data) {
     <h2>${prop.name} - ${arrumarData(prop.scheduled)}</h2>
     <h4>${prop.attractions}</h4>
     <p>${prop.description}</p>
-    <button class="btn btn-primary" onclick="abreModal('${
-      prop._id
-    }')" >reservar ingresso</button>
+    <button class="btn btn-primary" onclick="showModal('${prop._id}')" >reservar ingresso</button>
     </article>`;
-  })
-    }
+  })}
 
     todosEventos();
+
+    async function showModal(id) {
+      modal.setAttribute("style", "display:flex");
+      inputID.value = id;
+      const resposta = await fetch(`${url}/${id}`);}
+
+      btn.addEventListener('click', function fechaModal () {
+        modal.setAttribute("style", "display:none");
+        nome.value = "";
+        email.value = "";
+        inputID.value ="";
+      });
+
+      twoBtn.addEventListener('click', function fechaModal () {
+        modal.setAttribute("style", "display:none");
+        nome.value = "";
+        email.value = "";
+        inputID.value ="";
+      });
