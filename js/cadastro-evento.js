@@ -42,8 +42,6 @@ evento = JSON.stringify(evento)
 
 postEvento(evento);
 
-
-
 });
 
 
