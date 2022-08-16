@@ -1,4 +1,4 @@
-const url = "https://xp41-soundgarden-api.herokuapp.com/bookings/event/:eventID";
+const url = "https://xp41-soundgarden-api.herokuapp.com/bookings/event";
 const novoEvento = document.querySelector("tbody")
 
 
@@ -25,9 +25,9 @@ async function todosEventos () {
        resultado.forEach((prop) => {
         novoEvento.innerHTML += `<tr> 
         <th scope="row">${resultado.indexOf(prop) + 1}</th>
-        <td>${arrumarData(prop.scheduled)}</td>
-        <td>${prop.name}</td>
-        <td>${prop.attractions}</td>
+        <td>${prop.owner_name}</td>
+        <td>${prop.owner_email}</td>
+        <td>${prop.number_tickets}</td>
         </tr>
         `
         })
