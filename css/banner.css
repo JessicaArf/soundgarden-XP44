@@ -1,12 +1,12 @@
 #slid {
-width: 1000px;
+width: 100%;
 height: 35vw;
 position: relative;
 display: flex;
 align-items: center;
 }
 #slid img {
-width: 1000px;
+width: 100%;
 height: 100%;
 object-fit: cover;
 position: absolute;
@@ -15,7 +15,6 @@ opacity: 0;
 
 #slid .selected {
 opacity: 1;
-
 }
 
 

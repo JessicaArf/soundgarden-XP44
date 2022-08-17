@@ -1,4 +1,4 @@
-let time = 3000
+let time = 5000
 let currentImageIndex = 0
 let img = document.querySelectorAll('#slid img')
 let max = img.length 
