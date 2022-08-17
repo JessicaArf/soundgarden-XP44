@@ -13,6 +13,7 @@ function arrumarData (data) {
     return dataCorrigida;
   };
 
+  
 async function todosEventos () {
 
     const response = await fetch(url)

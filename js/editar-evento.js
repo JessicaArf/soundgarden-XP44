@@ -19,7 +19,7 @@ async function todosEventos () {
     inputPoster.value= resposta.poster
     inputAtracoes.value= resposta.attractions
     inputDescricao.value = resposta.description
-    inputData.value= resposta.scheduled
+    inputData.value = resposta.scheduled
     inputLotacao.value= resposta.number_tickets
   
     }

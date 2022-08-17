@@ -1,0 +1,25 @@
+#slid {
+width: 1000px;
+height: 35vw;
+position: relative;
+display: flex;
+align-items: center;
+}
+#slid img {
+width: 1000px;
+height: 100%;
+object-fit: cover;
+position: absolute;
+opacity: 0;
+}
+
+#slid .selected {
+opacity: 1;
+
+}
+
+
+
+
+
+

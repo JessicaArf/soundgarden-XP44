@@ -44,19 +44,16 @@ function arrumarData (data) {
       inputID.value = id;
       const resposta = await fetch(`${url}/events/${id}`);}
 
-      btn.addEventListener('click', function fechaModal () {
+      function fechaModal () {
         modal.setAttribute("style", "display:none");
         nome.value = "";
         email.value = "";
-        inputID.value ="";
-      });
+        lotacao.value="";
+        inputID.value =""; }
 
-      twoBtn.addEventListener('click', function fecharModal () {
-        modal.setAttribute("style", "display:none");
-        nome.value = "";
-        email.value = "";
-        inputID.value ="";
-      });
+      btn.addEventListener('click', fechaModal)
+
+      twoBtn.addEventListener('click', fechaModal)
         
       btnEnviar.addEventListener('click', async function criarReserva (e) {
         e.preventDefault();
