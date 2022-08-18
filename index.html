@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./css/modal.css">
         <link rel="stylesheet" href="./css/banner.css">
         <script src="./js/index.js" defer></script>
-        
+
     </head>
 
     <body>
@@ -19,13 +19,48 @@
             <img src="img/Sound-logo (1).png" width="300" alt="">
         </header>
         <main>
-            <section class="full d-flex justify-content-center align-items-center" style="background-color: #F8BBD0; color: #fff">
-                    <div id="slid">
-                        <img class="selected" src="./img/banneramy1.jpg" alt="banner1">
-                        <img src="./img/bannerevanescence.jpg" alt="banner2">
-                        <img src="./img/bannergaga.png" alt="banner3">
-                        <img src="./img/bannerlana.jpg" alt="banner4">
-                </div>
+            <section id="bodybanner" class="full d-flex justify-content-center align-items-center" style="background-color: #F8BBD0; color: #fff">
+               
+                <div class="slider">
+
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+    
+                        <div class="slide first">
+                            <img src="./img/bannergaga.jpg" alt="imagem1
+                            ">
+                        </div>
+                        <div class="slide ">
+                            <img src="./img/banneramy.jpg" alt="imagem2
+                            ">
+                        </div>
+                        <div class="slide ">
+                            <img src="./img/bannerevanescence.jpg" alt="imagem3
+                            ">
+                        </div>
+                        <div class="slide ">
+                            <img src="./img/bannerlana.jpg" alt="imagem4
+                            ">
+                        </div>
+    
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+    
+                        </div>
+    
+                    </div>
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
             </section>
             <section class="full">
                 <div class="container text-center">
@@ -47,18 +82,18 @@
                             <p>Sound Garden é uma casa de show super descolada</p>
 
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id autem, fugiat recusandae, totam
-                                                                                                                                                                                                                                    inventore harum iste libero obcaecati neque fugit ipsam. Dolorum quae quis odio rem at eum
-                                                                                                                                                                                                                                    cumque excepturi.</p>
+                                                                                                                                                                                                                                                                    inventore harum iste libero obcaecati neque fugit ipsam. Dolorum quae quis odio rem at eum
+                                                                                                                                                                                                                                                                    cumque excepturi.</p>
                             <p>Alias animi nostrum aperiam sapiente laudantium
-                                                                                                                                                                                                                                    corporis esse voluptatem, repellendus nam exercitationem reprehenderit error. Maiores
-                                                                                                                                                                                                                                    quibusdam molestias adipisci magni maxime explicabo voluptatibus ipsum delectus, cum soluta
-                                                                                                                                                                                                                                    esse ab ducimus. Molestias facilis hic quod similique, voluptate porro architecto itaque
-                                                                                                                                                                                                                                    odit dolore temporibus, dignissimos magni delectus in?</p>
+                                                                                                                                                                                                                                                                    corporis esse voluptatem, repellendus nam exercitationem reprehenderit error. Maiores
+                                                                                                                                                                                                                                                                    quibusdam molestias adipisci magni maxime explicabo voluptatibus ipsum delectus, cum soluta
+                                                                                                                                                                                                                                                                    esse ab ducimus. Molestias facilis hic quod similique, voluptate porro architecto itaque
+                                                                                                                                                                                                                                                                    odit dolore temporibus, dignissimos magni delectus in?</p>
                             <p>Nemo excepturi soluta provident minima amet? Architecto
-                                                                                                                                                                                                                                    distinctio molestiae nisi necessitatibus nesciunt possimus dignissimos consequatur iusto
-                                                                                                                                                                                                                                    cupiditate quam accusantium tempora odio at deleniti explicabo voluptatum blanditiis natus
-                                                                                                                                                                                                                                    qui, dolorem ea eius minima itaque aspernatur? Quia voluptatem ex, mollitia consequuntur
-                                                                                                                                                                                                                                    quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
+                                                                                                                                                                                                                                                                    distinctio molestiae nisi necessitatibus nesciunt possimus dignissimos consequatur iusto
+                                                                                                                                                                                                                                                                    cupiditate quam accusantium tempora odio at deleniti explicabo voluptatum blanditiis natus
+                                                                                                                                                                                                                                                                    qui, dolorem ea eius minima itaque aspernatur? Quia voluptatem ex, mollitia consequuntur
+                                                                                                                                                                                                                                                                    quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
                         </div>
                         <div class="col">
                             <img src="img/music.svg" width="500px">
@@ -86,7 +121,7 @@
 
                 </div>
 
-        </main>
+            </main>
             <footer>
                 <div class="container d-flex justify-content-center align-items-center">
                     <a href="#">
@@ -101,5 +136,6 @@
                 </div>
             </footer>
             <script src="./js/banner.js"></script>
+        </body>
     </body>
 </html>

@@ -1,26 +1,14 @@
-let time = 5000
-let currentImageIndex = 0
-let img = document.querySelectorAll('#slid img')
-let max = img.length 
+let count = 1;
+document.getElementById("radio1").checked = true;
 
+setInterval( () => {
+nextImage();
+}, 4000)
 
 function nextImage() {
-
-    img[currentImageIndex].classList.remove("selected")    
-
-    currentImageIndex++
-
-    if (currentImageIndex >= max){
-    currentImageIndex = 0}
-    
-    img[currentImageIndex].classList.add("selected")
-   
+count++;
+if(count > 4){
+count= 1;
 }
-
-function start (){
-    setInterval(() => {
-        nextImage()
-    },time)
+document.getElementById("radio"+count).checked = true;
 }
-
-window.addEventListener('load', start)
