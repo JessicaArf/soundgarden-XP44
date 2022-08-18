@@ -23,3 +23,8 @@ exiba os eventos e permita que os clientes reservem ingressos através da Landin
 
 [![My Skills](https://skills.thijs.gg/icons?i=js,html,css)](https://skills.thijs.gg)
 
+## 👤 Grupo
+* Lorena Queiroz
+* André César
+
+
