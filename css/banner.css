@@ -1,7 +1,7 @@
 #banner-rotativo {margin: 0;
 padding: 0;
 width: 100%;
-height: 100vh;
+max-height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center; }
@@ -16,7 +16,7 @@ box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .slider img {
-width: 100%;
+width: 150vh;
 height: 100%;
 }
 
@@ -35,9 +35,6 @@ width: 25%;
 position: relative;
 }
 
-.slider img {
-width: 150vh;
-    }
 
 .manual-navigation {
 position: absolute;
@@ -74,4 +71,28 @@ background-color: #FFF;
   }
   #radio4:checked ~ .first {
     margin-left: -75%;
+  }
+
+  @media (max-width: 834px) {
+  #banner-rotativo{
+  width: 90%;
+  }
+  .slider {
+  max-width: 90%;
+  min-width: 300px;
+  }
+  .slider img {
+  max-width: 100%;
+  min-width: 300px;
+  }
+
+  .manual-navigation{
+  max-width: 90%;
+  }
+  }
+
+  @media (max-width: 550px) {
+    .manual-navigation{
+    margin-top: -6%;
+      }
   }

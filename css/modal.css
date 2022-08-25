@@ -78,3 +78,35 @@ width: 180px;
 border-radius: 5px;
 margin-bottom: 30px;
 }
+
+@media (max-width: 500px) {
+#headermodal{
+width: 300px;
+}
+#formulario{
+padding-left: 10%;
+}
+#name{
+width: 90%;
+}
+
+#email{
+width: 90%;
+}
+
+#lotacao{
+width: 90%;
+}
+
+#btn-fecha{
+display: none;
+}
+
+.two-btn{
+width: 90px;
+}
+
+.btn-submit{
+width: 90px;
+}
+}

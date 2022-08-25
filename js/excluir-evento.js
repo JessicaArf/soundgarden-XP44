@@ -9,6 +9,21 @@ const URL = 'https://xp41-soundgarden-api.herokuapp.com/events';
 
 const id = new URLSearchParams (window.location.search).get('id');
 
+function arrumarData (data) {
+    let date = data.split("");
+    let dataCorrigida =
+      date.slice(8, 10).join("") +
+      "/" +
+      date.slice(5, 7).join("") +
+      "/" +
+      date.slice(0, 4).join("") + 
+      "  " +
+      date.slice(11,19).join("") 
+    
+
+    return dataCorrigida;
+  };
+
 async function todosEventos () {
 
     const resultado = await fetch(`${URL}/${id}`);
@@ -19,7 +34,7 @@ async function todosEventos () {
     inputPoster.value= resposta.poster
     inputAtracoes.value= resposta.attractions
     inputDescricao.value = resposta.description
-    inputData.value= resposta.scheduled
+    inputData.value= arrumarData(resposta.scheduled)
     inputLotacao.value= resposta.number_tickets
   
     }

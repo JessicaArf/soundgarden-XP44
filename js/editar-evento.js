@@ -12,19 +12,20 @@ const id = new URLSearchParams (window.location.search).get('id');
 async function todosEventos () {
 
     const resultado = await fetch(`${URL}/${id}`);
-    
+
     const resposta = await resultado.json();
-    
+
     inputNome.value= resposta.name
     inputPoster.value= resposta.poster
     inputAtracoes.value= resposta.attractions
     inputDescricao.value = resposta.description
-    inputData.value = resposta.scheduled
+    inputData.value = resposta.scheduled.slice(0,16)
     inputLotacao.value= resposta.number_tickets
   
     }
     
     todosEventos();
+
 
 async function editarEvento (eventoAtualizado) {
     const response = await fetch (`${URL}/${id}`, {
@@ -44,11 +45,9 @@ async function editarEvento (eventoAtualizado) {
     }
 };
 
-
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    
     let eventoAtualizado = {
         name: inputNome.value,
         poster: inputPoster.value,
