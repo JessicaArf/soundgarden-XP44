@@ -9,10 +9,11 @@ const nome = document.querySelector("#name")
 const email = document.querySelector("#email")
 const ticket = document.querySelector("#lotacao")
 const btnEnviar = document.querySelector("#btn-enviar")
+const errorEmail = document.querySelector("#error-email")
 
-
+// listar evento
 function arrumarData (data) {
-    let date = data.split(""); // cortar a data para adicionar o / nos lugares corretos
+    let date = data.split(""); 
     let dataCorrigida =
       date.slice(8, 10).join("") +
       "/" +
@@ -39,6 +40,8 @@ function arrumarData (data) {
   })}
 
     todosEventos();
+
+    // modal
 
     async function showModal(id) {
       modal.setAttribute("style", "display:flex");
@@ -81,6 +84,26 @@ function arrumarData (data) {
      window.location.href = "admin.html"
     }
       })
+
+  // validar email
+
+  function validarEmail() {
+  
+  if(!email.checkValidity()){
+  errorEmail.innerHTML = "Digite um email válido"
+  }
+  }
+
+function msg () {
+if(errorEmail.innerHTML == "Digite um email válido"){
+errorEmail.innerHTML = "";
+}
+}
+
+
+
+
+
 
 
     

@@ -95,7 +95,10 @@
                         <div id="bodymodal">
                             <form id="formulario">
                                 <input type="text" class="form-control" id="name" placeholder="Nome">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                <input type="email" class="form-control" id="email" placeholder="E-mail" onblur="validarEmail()" onfocus="msg()">
+                                <div class="error">
+                                <span id="error-email"></span>
+                                </div>
                                 <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao" placeholder="Número de igressos">
                             </div>
                             <input type="hidden" name="id" id="inputId">
