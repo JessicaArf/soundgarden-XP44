@@ -78,7 +78,7 @@ function arrumarData (data) {
 
     if (response.status == 201) {
      alert("Reserva efetuada com sucesso")
-     window.location.href = "admin.html"
+     window.location.href = "index.html"
     }
       })
 
