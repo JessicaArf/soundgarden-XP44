@@ -1,9 +1,9 @@
 const url = "https://xp41-soundgarden-api.herokuapp.com/bookings/event";
 const novoEvento = document.querySelector("tbody")
 
-
+//  função para formatar a data 
 function arrumarData (data) {
-    let date = data.split(""); // cortar a data para adicionar o / nos lugares corretos
+    let date = data.split("");
     let dataCorrigida =
       date.slice(8, 10).join("") +
       "/" +
@@ -15,6 +15,8 @@ function arrumarData (data) {
   };
 
 const id = new URLSearchParams (window.location.search).get('id');
+
+// função para listar as reservas 
 
 async function todosEventos () {
 
@@ -34,3 +36,8 @@ async function todosEventos () {
 }
 
 todosEventos();
+
+// função para abrir o menu
+
+$('#menu-btn').click(() => {
+$('#menu').toggleClass("active");}) 

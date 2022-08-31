@@ -7,6 +7,7 @@ const inputPoster = document.querySelector("#poster");
 const form = document.querySelector("form");
 const url = "https://xp41-soundgarden-api.herokuapp.com/events"
 
+// requisição
 
 async function postEvento (evento) {
     const response = await fetch (`${url}`, {
@@ -26,6 +27,8 @@ async function postEvento (evento) {
     }
 };
 
+// dados que serão enviados
+
 form.addEventListener("submit", (e) => {
 e.preventDefault();
 
@@ -43,5 +46,10 @@ evento = JSON.stringify(evento)
 postEvento(evento);
 
 });
+
+// função para abrir o menu
+
+$('#menu-btn').click(() => {
+$('#menu').toggleClass("active");}) 
 
 

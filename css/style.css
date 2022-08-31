@@ -57,8 +57,12 @@ cursor: pointer;
 }
 
 #img-footer {
-max-width: 20vh;
+max-width: 19vh;
             }
+
+#content-form{
+margin: 8% 0 10% 10%;
+                }
 
 @media (max-width: 835px) {
 #atracoes{
@@ -83,4 +87,10 @@ justify-content: center;
 align-self: center;
 }
 
+#content-form{
+    margin: 17% 0 10% 10%;
+    }
  }
+
+
+ 
